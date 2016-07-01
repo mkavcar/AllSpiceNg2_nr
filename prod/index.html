@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+<head>
+  <base href="/">
+  <title>All Spice</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="AllSpice">
+  <link rel="apple-touch-icon" href="content/images/icon-152x152.png" />
+  
+  <link rel="manifest" href="manifest.json">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="content/style.css">
+  
+  <script src="lib/es6-shim.min.js"></script>  
+  <script src="lib/zone.min.js"></script>
+  <script src="lib/Reflect.js"></script>
+  <script src="lib/system.js"></script>
+  
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  
+  <script>
+      System.config({
+          map: {
+              app: 'dist',
+              '@angular': 'node_modules/@angular',
+              rxjs: 'node_modules/rxjs',
+              firebase: 'node_modules/firebase/lib/firebase-web.js',
+              angularfire2: 'node_modules/angularfire2'
+          },
+          packages: {
+              app: {
+                  main: 'main.js',
+                  defaultExtension: 'js'
+              },
+              rxjs: {
+                  defaultExtension: 'js'
+              },
+              angularfire2: {
+                  main: 'angularfire2.js',
+                  defaultExtension: 'js'                
+              },
+              '@angular/common': {
+                  main: 'index.js',
+                  defaultExtension: 'js'
+              },
+              '@angular/compiler': {
+                  main: 'index.js',
+                  defaultExtension: 'js'
+              },
+              '@angular/core': {
+                  main: 'index.js',
+                  defaultExtension: 'js'
+              },
+              '@angular/platform-browser': {
+                  main: 'index.js', 
+                  defaultExtension: 'js'
+              },
+              '@angular/platform-browser-dynamic': {
+                  main: 'index.js',
+                  defaultExtension: 'js'
+              }
+          }
+      });
+      System.import('app')
+        .then(null, console.error.bind(console));
+  </script>
+</head>
+<body>
+  <spice-app></spice-app>
+</body>
+</html>
